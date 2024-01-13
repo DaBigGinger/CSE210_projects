@@ -15,7 +15,7 @@ class Program
         {
             letter = "A";
         }
-        else if (percent >=80)
+        else if (percent >= 80)
         {
             letter = "B";
         }
