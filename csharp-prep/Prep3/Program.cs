@@ -5,8 +5,14 @@ class Program
     static void Main(string[] args)
     {
         // Gathering Information for parts 1 & 2 where magic number is chosen
-        Console.WriteLine("What is the magic number? ");
-        int magicNum = int.Parse(Console.ReadLine());
+        //Console.WriteLine("What is the magic number? ");
+        //int magicNum = int.Parse(Console.ReadLine());
+
+
+        // random number generator for part 3
+        Random randomgenerator = new Random();
+        int magicNum = randomgenerator.Next(1,11);
+        // Set variable guess before
         int guess = -1;
         // Loop to guide the user higher or lower if guess is wrong
         while (guess != magicNum)
