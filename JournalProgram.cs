@@ -1,1 +1,0 @@
-// Enter Journal program here
