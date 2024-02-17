@@ -13,11 +13,15 @@ public class Scripture
     }
 
     // Method to hide random words
-    public void HideRandomWords()
+    // Method to hide random words
+    public void HideRandomWords(int numWordsToHide)
     {
         Random rand = new Random();
-        int numWordsToHide = rand.Next(1, _words.Count / 2); // Adjust range as needed
         int wordsHidden = 0;
+
+    // Check if there are fewer words left to hide than the requested number
+        if (numWordsToHide > _words.Count)
+            numWordsToHide = _words.Count;
 
         while (wordsHidden < numWordsToHide)
         {
@@ -29,9 +33,12 @@ public class Scripture
             }
         }
     }
+
+
     // Method to display the scripture
     public void Display(ScriptureReference reference)
     {
+        Console.Clear();
         Console.WriteLine($"{reference.Book} {reference.Chapter}:{reference.StartVerse}-{reference.EndVerse}");
         foreach (Word word in _words)
         {
